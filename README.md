@@ -1,4 +1,4 @@
-# aro
+# ARO - Azure RedHat OpenShift 
 ARO install script in 'Free VS Code' sub  (aka not Azure production sub)
 
 ## Pre-Req: 
@@ -40,4 +40,10 @@ Procedure:
 6. Optional: Create Service Princpal (SP) or Managed Identity.
 
 It is recommended to use a SP with proper permissions. [Creating Azure SP](https://docs.openshift.com/container-platform/4.17/installing/installing_azure/installing-azure-account.html#installation-creating-azure-service-principal_installing-azure-account)
+
+
+## Notes: 
+
+1. The cluster is expensive and will use up your balance in a couple days.  There is no 'Stop' option, only delete.
+2. [Connect to the OpenShift Console](https://learn.microsoft.com/en-us/azure/openshift/connect-cluster) after the cluster is created. 
    
