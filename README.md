@@ -7,22 +7,22 @@ ARO install script in 'Free VS Code' sub  (aka not Azure production sub)
  
 2. Check quota for region:
 ```bash
-    $ LOCATION=eastus
-    $ az vm list-usage -l $LOCATION --query "[?contains(name.value, 'standardDSv3Family')]" -o table
+    LOCATION=eastus
+    az vm list-usage -l $LOCATION --query "[?contains(name.value, 'standardDSv3Family')]" -o table
 ```
 
 4. Register resource providers
 ```bash
-    $ az provider register --namespace Microsoft.Kubernetes --wait
-    $ az provider register --namespace Microsoft.KubernetesConfiguration --wait
-    $ az provider register --namespace Microsoft.ExtendedLocation --wait
-    $ az provider register --namespace Microsoft.RedHatOpenShift --wait
+    az provider register --namespace Microsoft.Kubernetes --wait
+    az provider register --namespace Microsoft.KubernetesConfiguration --wait
+    az provider register --namespace Microsoft.ExtendedLocation --wait
+    az provider register --namespace Microsoft.RedHatOpenShift --wait
 ```
 
 5. Check that the providers are registered 
 ```bash
-    $ az provider show -n Microsoft.Kubernetes -o table
-    $ az provider show -n Microsoft.KubernetesConfiguration -o table
-    $ az provider show -n Microsoft.ExtendedLocation -o table
-    $ az provider show -n Microsoft.RedHatOpenShift -o table
+    az provider show -n Microsoft.Kubernetes -o table
+    az provider show -n Microsoft.KubernetesConfiguration -o table
+    az provider show -n Microsoft.ExtendedLocation -o table
+    az provider show -n Microsoft.RedHatOpenShift -o table
 ```
