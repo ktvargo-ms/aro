@@ -39,11 +39,13 @@ Procedure:
 
 6. Optional: Create Service Princpal (SP) or Managed Identity.
 
-It is recommended to use a SP with proper permissions. [Creating Azure SP](https://docs.openshift.com/container-platform/4.17/installing/installing_azure/installing-azure-account.html#installation-creating-azure-service-principal_installing-azure-account)
+It is recommended to use a SP with proper permissions. [Creating Azure SP](https://docs.openshift.com/container-platform/4.17/installing/installing_azure/installing-azure-account.html#installation-creating-azure-service-principal_installing-azure-account) gives more details on proper permissions. 
+
+Note: MS tenants wil require a SP tied to proper ServiceTree. 
 
 
 ## Notes: 
 
-1. The cluster is expensive and will use up your balance in a couple days.  There is no 'Stop' option, only delete.
+1. The cluster is expensive to run and will use up your balance in a couple days.  There is no 'Stop' option, only delete.
 2. [Connect to the OpenShift Console](https://learn.microsoft.com/en-us/azure/openshift/connect-cluster) after the cluster is created. 
    
