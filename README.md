@@ -3,9 +3,11 @@ ARO install script in 'Free VS Code' sub  (aka not Azure production sub)
 
 ## Pre-Req: 
 
-1. Increase quota: A minimun of 44 vCPUs is needed and the default is only 30.  Read the instructions on [increasing-limits](https://docs.openshift.com/container-platform/4.17/installing/installing_azure/installing-azure-account.html#installation-azure-increasing-limits_installing-azure-account) via portal.  
+1. Increase quota:
+  
+A minimun of 44 vCPUs is needed and the default is only 30.  Read the instructions on [increasing-limits](https://docs.openshift.com/container-platform/4.17/installing/installing_azure/installing-azure-account.html#installation-azure-increasing-limits_installing-azure-account) via portal.  
  
-2. Check quota for region:
+4. Check quota for region:
 ```bash
     LOCATION=eastus
     az vm list-usage -l $LOCATION --query "[?contains(name.value, 'standardDSv3Family')]" -o table
@@ -27,6 +29,7 @@ ARO install script in 'Free VS Code' sub  (aka not Azure production sub)
     az provider show -n Microsoft.RedHatOpenShift -o table
 ```
 6. Optional: Obtain a Red Hat pull secret
+   
 A Red Hat pull secret enables your cluster to access Red Hat container registries along with additional content. This step is optional but recommended. Without the pull secret, you will have limited functionality.
 
 Procedure:
