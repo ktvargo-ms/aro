@@ -26,3 +26,10 @@ ARO install script in 'Free VS Code' sub  (aka not Azure production sub)
     az provider show -n Microsoft.ExtendedLocation -o table
     az provider show -n Microsoft.RedHatOpenShift -o table
 ```
+6. Optional: Obtain a Red Hat pull secret
+A Red Hat pull secret enables your cluster to access Red Hat container registries along with additional content. This step is optional but recommended. Without the pull secret, you will have limited functionality.
+
+Procedure:
+- Log in to the [OpenShift® cluster manager portal](https://www.ibm.com/links?url=https%3A%2F%2Fconsole.redhat.com%2Fopenshift%2Finstall%2Fazure%2Faro-provisioned).
+- Click Download pull secret to download the pull secret (it is encouraged that you store the file in a safe location).
+- Save the file as pullsecret.txt and place it in the same location as the install script. 
