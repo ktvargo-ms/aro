@@ -1,7 +1,8 @@
 # ARO - Azure RedHat OpenShift 
-ARO install script in 'Free VS Code' sub  (aka not Azure production sub)
 
-## Pre-Req: 
+## ARO install script in 'Free VS Code' sub  (aka not Azure production sub)
+
+### Pre-Req: 
 
 1. Increase quota:
   
@@ -44,8 +45,9 @@ It is recommended to use a SP with proper permissions. [Creating Azure SP](https
 Note: MS tenants wil require a SP tied to proper ServiceTree. 
 
 
-## Notes: 
+### Notes: 
 
 1. The cluster is expensive to run and will use up your balance in a couple days.  There is no 'Stop' option, only delete.
 2. [Connect to the OpenShift Console](https://learn.microsoft.com/en-us/azure/openshift/connect-cluster) after the cluster is created. 
    
+## ARM Template 
